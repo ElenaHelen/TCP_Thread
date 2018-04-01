@@ -180,19 +180,18 @@ bool SendResponse(char* buffer, SOCKET sock) {
 
 //===============Get Values====================
 void getValues(char* arr, float& maxEl, float& minEl, float& Avg){
-    string str(arr);
+    string str(arr), token;
     vector<float> vect;
-    int pos = 0;
-    string token;
+    int pos = 1;
+    token = str.substr(0, 0);
+    vect.push_back(atof(token.c_str()));
+    minEl = vect[0];
+    maxEl = vect[0];
+    float Sum = 0;
     while ((pos = str.find(' ')) != string::npos) {
         token = str.substr(0, pos);
         vect.push_back(atof(token.c_str()));
         str.erase(0, pos + 1);
-    }
-    minEl = vect[0];
-    maxEl = vect[0];
-    float Sum = 0;
-    for (unsigned i = 0; i < vect.size(); i++){
         minEl = (vect[i] < minEl) ? vect[i] : minEl;
         maxEl = (vect[i] > maxEl) ? vect[i] : maxEl;
         Sum += vect[i];
