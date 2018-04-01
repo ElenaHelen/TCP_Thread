@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1444333003 source:c:\users\elena\desktop\Пузирьов\tcpthreadserver\main.cpp
+	"commonutils.h"
+	<vector>
+
+1444325548 c:\users\elena\desktop\Пузирьов\tcpthreadserver\commonutils.h
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<winsock2.h>
+	<cstdio>
+	<time.h>
+	<sys/time.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<sys/select.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<netdb.h>
+	<unistd.h>
+	<pthread.h>
+	<errno.h>
+
